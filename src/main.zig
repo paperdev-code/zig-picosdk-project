@@ -7,7 +7,7 @@ export fn main() i32 {
     pico.stdio.init_all();
 
     pico.cyw43.init() catch {
-        std.log.err("WiFi fail.");
+        std.log.err("WiFi fail.", .{});
         return 1;
     };
     defer pico.cyw43.deinit();
